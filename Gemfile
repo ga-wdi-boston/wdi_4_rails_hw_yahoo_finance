@@ -27,7 +27,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-gem 'yahoo_finance'
+gem 'yahoo-finance', github: 'herval/yahoo-finance'
 
 group :development do
   gem 'pry'

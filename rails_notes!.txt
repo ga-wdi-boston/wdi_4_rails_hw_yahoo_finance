@@ -1,0 +1,153 @@
+*rails is an opinionated frame-work
+
+*rails values convetion over configuration
+
+** note that you can over-ride somethings - but it can be a strength that rails can do things quickly
+
+
+** there are a lot of features built in - and a lot of it may look like "magic"
+ ** recall that most of these things will be methods/functions - so keep that in mind
+
+.......................
+looking at web pages - viewing how it works from a developer stand-point
+
+** look for the value proposition - what does it do for you?
+** when presenting your product you need to say how does it will it give you that value?
+
+>>>>>>>>>>>>>>>>>
+
+production - live to the world
+
+staging - same config as produciton but for testing purposes (pre-produciton)
+
+development - local machine
+
+testing - Rspec testing
+
+*** each one of these four should have different databases
+*** the enviroments - consits of the configuration for Rails itself
+>>>>>>>>>>>>>>>>>>>>>>>>
+
+README -
+* should cover how to get things running
+
+Rakefile -
+* usually a single line run - which will do a task which is not related to and HTTP request.( this file helps you run them - don't need to edit it)
+
+Gemfile -
+* add pry-rails or whatever you will use
+
+config.ru -
+* no need to edit
+
+.gitignore -
+to keep logs ect from going up on git
+
+vendor dir -
+* indended for things which you use - but do not mantain
+
+temp dir -
+* for set up configs
+
+test dir -
+* for mini test- may not need it
+
+public dir -
+* put static information which things can be see to the web - say the error pages or the robots.txt ( to tell google not to scrap the site yet) - or your icon ** rails is not good for hosting static assets - ok for produciton not for preduction
+
+
+log dir -
+* keep track of things which happen
+
+lib dir -
+* may store rake scripts here
+
+db dir -
+* can put any ruby code in seeds file to help test
+
+config dir -
+* routes.rb will become inportant
+* database.yml - will allow you to set up enviorments
+* boot.rb - dont touch it
+*locales - for internationalizaiton ( putting it up in more than one lang)
+* initializers dir - any code that is in any of those files runs when the server is launched
+
+enviroments -
+* this is where you actually set the confirgurations
+
+bin dir -
+* just holds .exe ( dnot not change )
+
+app dir -
+assets::
+* this is where you write your application!
+	** assests - store images, .ccs  and all that
+	** javascript - is stored here
+controlers::
+* the inital logic for connecting the views to the data
+  ** do not delete anything here - just add
+helpers::
+* shared methods across our views
+mailers::
+* related to emailing
+models::
+* where application logic is kept ( like a bank account - balance can't be less than zero) - ths logic which relates to the data it self
+views::
+*layouts for the view on the web ( mostly html.erb but there are oher types)
+
+
+............
+
+to set up a new app woth postgres
+
+1) cmd line >> rails new SecondSite --database=postgresql -T
+.............. rails new NAMEofSITE --database=postgresql ( -T removed test dir)
+2) in file - under config database.yml delete user/password fields and save
+3) cmd line >> rake db:create
+4) cmd line >>  psql -l (checks to see if it is created)
+5) cmd line >> rails server
+
+note:
+using rails generate ..... ( with arguments)
+* diagraming is useful
+
+need to create::
+Route - takes in an HTTP request- and picks which controller to go to- also anwsers the question of what parts of the url become parameters
+ * the route does not send you to a view or modlle ( only speficfies the controller)
+Controller - has medthos called actions ( may be named POST#show - post controller and the show action)
+	* actions may hold a small amount of logic -( like just an if statement)
+	* actions may also interact with database through calling a modle
+	* actions might also direct formmatting of a responce
+	* controllers will provide information to a view speified by naming convetion and pass data via instance @variable
+	* the name of a controller and its action will line up with a view
+View - use ERB and acccess info by insatnce @variable and have reuseable code in the helpers
+	* view renders into html
+
+rails generate controller People show index
+**  the controller should be plural  ** then some actions ( here they are show and index )
+
+rails destroy controller Poeple
+** will  get rid of that controller
+** but you must remove the paths from the routes.rb file
+
+note -
+* ActionController::Base
+	* a huge part of rails
+	* contains methods ect .. which allow things to run and inherit the same way
+
+in the view - do not put lots of logic in it
+* good = if user logged in - show logout button
+* bad = do you have enough water for oxen? ok - alter database
+
+MUST USE INSTANCE VARIABLES TO COMMUNICATE BETWEEN CONTROLLER AND VIEW
+
+
+
+
+
+
+
+
+
+
+
