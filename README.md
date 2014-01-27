@@ -10,31 +10,19 @@ The [Yahoo Finance Gem](https://github.com/herval/yahoo-finance) allows to you r
 
 4. Create a route for this action.
 
-5. Create a [Before Filter](http://guides.rubyonrails.org/action_controller_overview.html#filters) that will return an Array of the [Top Ten Tech Stocks of 2103](http://goo.gl/qygF3l).
+5. Add the Yahoo Finance gem to your `Gemfile` and run `bundle install`.
 
-```
-before_action :top_stocks
+6. Use `YahooFinance.quotes` to get info for these top stocks in your index action.
 
-...
+7. Create a view to show all these stocks. Each stock should have a link to show the individual view of a stock.
 
-def top_stocks
-  %w{ GOOG MSFT }
-end
-```
+8. Create a show action in the stocks controller.
 
-6. Add the Yahoo Finance gem to your `Gemfile` and run `bundle install`.
+9. Add a route to this show action. The route will take a "ticker" parameter.
 
-7. Use `YahooFinance.quotes` to get info for these top stocks in your index action.
+10. Use this ticker parameter to find info from Yahoo Finance about that stock.
 
-8. Create a view to show all these stocks. Each stock should have a link to show the individual view of a stock.
-
-9. Create a show action in the stocks controller.
-
-10. Add a route to this show action. The route will take a "ticker" parameter.
-
-11. Use this ticker parameter to find info from Yahoo Finance about that stock.
-
-12. Create a show view to show some detailed info about the individual stock.
+11. Create a show view to show some detailed info about the individual stock.
 
 ### Extra credit
 
