@@ -4,5 +4,6 @@ class StocksController < ApplicationController
   end
 
   def show
+  	@quote_detail = YahooFinance.quotes([params[:symbol]])
   end
 end

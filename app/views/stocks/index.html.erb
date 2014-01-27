@@ -8,12 +8,11 @@
 	 	<title>Top 10 Stocks of 2013</title>
 	 </head>
 	 <body>
-
+	 <h1> The Top 10 Stocks</h1>
 		 <ol>
-		 <% @quotes.map do |stock|%>
-		 <li><%= stock[:symbol] %> : <%= stock[:last_trade_price] %></li>
-		 <%end%>
+			 <% @quotes.map do |stock|%>
+			 <li> Symbol: <%= stock[:symbol] %>, Last Trade Price: <%= stock[:last_trade_price] %></li>
+			 <%end%>
 		 </ol>
-
 	 </body>
  </html>
