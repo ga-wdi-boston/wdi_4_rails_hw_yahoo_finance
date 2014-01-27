@@ -24,7 +24,7 @@ end
 
 6. Add the Yahoo Finance gem to your `Gemfile` and run `bundle install`.
 
-7. Get info for these top stocks. `@stocks = YahooFinance.quotes(top_stocks[:ask, :bid, :last_trade_date])`
+7. Use `YahooFinance.quotes` to get info for these top stocks in your index action.
 
 8. Create a view to show all these stocks. Each stock should have a link to show the individual view of a stock.
 
