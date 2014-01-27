@@ -1,6 +1,8 @@
 ## Yahoo Finance Rails app
 
-The [Yahoo Finance Gem](https://github.com/herval/yahoo-finance) allows to you retrieve current stock prices of tickers with live data. *From the internet!*
+The [Yahoo Finance Gem](https://github.com/herval/yahoo-finance) allows to you retrieve current stock prices of tickers with live data.
+
+**NOTE: You must add Yahoo Finance to your Gemfile using the following line, otherwise it won't work in Rails: `gem 'yahoo-finance', github: 'herval/yahoo-finance'`**
 
 1. Fork and clone this repository (I already ran `rails new yahoo_finance -T --database=postgresql` to create it). Run `rake db:create` to set up your database.
 
