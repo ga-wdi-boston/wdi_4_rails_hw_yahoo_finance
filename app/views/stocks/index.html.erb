@@ -1,5 +1,9 @@
-<h1>Stocks#index</h1>
-<p><% @data.each do |stock| %></p>
-<p><%= stock %></p>
+<h1>Top Ten Tech Stocks of 2013</h1>
+<h2>Summary:</h2>
+<dl> <%@stocks.zip(@data).each do |stock, data| %>
+<dt> <%= stock %></dt>
+<dd> Ask: <%= data.ask %>; Last Trading Price: <%= data.last_trade_price%></dd>
 <% end %>
+</dl>
+
 

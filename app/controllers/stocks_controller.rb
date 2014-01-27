@@ -1,6 +1,7 @@
 class StocksController < ApplicationController
   def index
-    @data = YahooFinance.quotes(["GOOG", "MSFT", "FB", "AMZN", "PCLN", "HPQ", "INTC", "QCOM", "MU", "YHOO"], [:ask, :bid, :last_trade_date])
+    @stocks = ["GOOG", "MSFT", "FB", "AMZN", "PCLN", "HPQ", "INTC", "QCOM", "MU", "YHOO"]
+    @data = YahooFinance.quotes(@stocks, [:ask, :last_trade_price]).to_a
   end
 
   def show
