@@ -1,0 +1,5 @@
+<h1>Top Ten Tech Stocks of 2013</h1>
+
+<% @stocks.each do |stock| %>
+	<p><a href="/stocks/show/<%= stock[:symbol] %>"><%= stock[:symbol] %></a>: <%= stock[:last_trade_price] %></p>
+<% end %>
