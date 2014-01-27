@@ -1,0 +1,63 @@
+<div class="container">
+	<div class="row">
+		<div class="page-header">
+			<h1><%= @stock.name %> <small>(<%= @stock.symbol %>)</small></h1>
+		</div>
+		<div class="span6">
+			<table class="table table-hover">
+				<tr>
+					<td>Previous Close</td>
+					<td><%= @stock.previous_close %></td>
+				</tr>
+				<tr>
+					<td>Open</td>
+					<td><%= @stock.open %></td>
+				</tr>
+				<tr>
+					<td>Bid</td>
+					<td><%= @stock.bid %></td>
+				</tr>
+				<tr>
+					<td>Ask</td>
+					<td><%= @stock.ask %></td>
+				</tr>
+				<tr>
+					<td>1 Yr Target Est.</td>
+					<td><%= @stock.oneyr_target_price %></td>
+				</tr>
+				<tr>
+					<td>Days Range</td>
+					<td><%= @stock.days_value_change %></td>
+				</tr>
+			</table>
+		</div>
+		<div class="span6">
+			<table class="table table-hover">
+				<tr>
+					<td>52 Wk Range</td>
+					<td><%= @stock.year_range %></td>
+				</tr>
+				<tr>
+					<td>Volume</td>
+					<td><%= @stock.volume %></td>
+				</tr>
+				<tr>
+					<td>Dividend Yield</td>
+					<td><%= @stock.dividend_yield %></td>
+				</tr>
+				<tr>
+					<td>Market Cap</td>
+					<td><%= @stock.market_capitalization %></td>
+				</tr>
+				<tr>
+					<td>P/E Ratio</td>
+					<td><%= @stock.pe_ratio %></td>
+				</tr>
+				<tr>
+					<td>Earnings Per Share</td>
+					<td><%= @stock.earnings_share %></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
