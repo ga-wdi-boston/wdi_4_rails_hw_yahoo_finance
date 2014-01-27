@@ -1,0 +1,11 @@
+<ul><% @stock_info.each do |stock| %>
+	<li>Symbol: <%= stock[:symbol] %><br>
+			Volume: <%= stock[:volume] %><br>
+			52 Week High: <%= stock[:high_52_weeks] %><br>
+			52 Week Low: <%= stock[:low_52_weeks] %><br>
+			EBITDA: <%= stock[:ebitda] %><br>
+			P/E Ratio: <%= stock[:pe_ratio] %><br>
+			Stock Exchange <%= stock[:stock_exchange] %>
+	 </li>
+<% end %>
+</ul>

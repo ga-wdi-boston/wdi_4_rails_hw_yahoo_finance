@@ -1,4 +1,7 @@
 <ul><% @stocks.each do |stock| %>
-	<li>Symbol: <%= stock[:symbol] %> Close Price: <%= stock[:close] %> Open Price: <%= stock[:open] %> Last Trade Price: <%= stock[:last_trade_price] %> </li>
+	<li>Symbol: <%= stock[:symbol] %>
+			Close Price: <%= stock[:close] %>
+			Open Price: <%= stock[:open] %>
+			Last Trade Price: <%= stock[:last_trade_price] %> </li>
 <% end %>
 </ul>

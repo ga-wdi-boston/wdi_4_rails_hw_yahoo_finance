@@ -1,5 +1,9 @@
 Wdi4HwRailsYahooFinance::Application.routes.draw do
   get "/stocks" => "stocks#index"
+  get "/stocks/:symbol" => "stocks#show" #I know this is supposed to be :ticker per the readme, but YahooFinance uses :symbol.
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
