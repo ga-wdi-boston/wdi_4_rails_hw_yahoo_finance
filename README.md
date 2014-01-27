@@ -14,7 +14,7 @@ The [Yahoo Finance Gem](https://github.com/herval/yahoo-finance) allows to you r
 
 6. Use `YahooFinance.quotes` to get info for these top stocks in your index action.
 
-7. Create a view to show all these stocks. Each stock should have a link to show the individual view of a stock.
+7. Create a view for the index action to show a summary of all these stocks.
 
 8. Create a show action in the stocks controller.
 
@@ -23,6 +23,8 @@ The [Yahoo Finance Gem](https://github.com/herval/yahoo-finance) allows to you r
 10. Use this ticker parameter to find info from Yahoo Finance about that stock.
 
 11. Create a show view to show some detailed info about the individual stock.
+
+12. Update your index view to link each of the top stocks to its detail page.
 
 ### Extra credit
 
