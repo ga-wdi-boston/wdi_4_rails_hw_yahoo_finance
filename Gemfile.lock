@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/herval/yahoo-finance.git
+  revision: 765075216fdd6800cff458de71d5e39f3647a6d5
+  specs:
+    yahoo-finance (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -136,7 +142,6 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    yahoofinance (1.2.2)
 
 PLATFORMS
   ruby
@@ -161,4 +166,4 @@ DEPENDENCIES
   sdoc
   turbolinks
   uglifier (>= 1.3.0)
-  yahoofinance
+  yahoo-finance!
