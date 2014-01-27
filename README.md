@@ -12,7 +12,7 @@ The [Yahoo Finance Gem](https://github.com/herval/yahoo-finance) allows to you r
 
 5. Add the Yahoo Finance gem to your `Gemfile` and run `bundle install`.
 
-6. Use `YahooFinance.quotes` to get info for the [Top Ten Tech Stocks of 2103](http://goo.gl/qygF3l).
+6. Use `YahooFinance.quotes` to get info for the [Top Ten Tech Stocks of 2013](http://goo.gl/qygF3l).
 
 7. Create a view for the index action to show a summary of all these stocks.
 
