@@ -3,9 +3,11 @@
 <dl>
   <% @stocks_summary.each do |stock| %>
   <dt><%= stock.symbol %></dt>
-  <dd>Last Trade Price: <%= stock.last_trade_price %><br>
+  <dd>
+  Last Trade Price: <%= stock.last_trade_price %><br>
   52 Week High: <%= stock.high_52_weeks %><br>
-  52 Week Low: <%=stock.low_52_weeks %>
+  52 Week Low: <%= stock.low_52_weeks %><br>
+  <a href = "/stocks/<%= stock.symbol %>" >Additional Details</a>
   </dd>
   <% end %>
 </dl>
