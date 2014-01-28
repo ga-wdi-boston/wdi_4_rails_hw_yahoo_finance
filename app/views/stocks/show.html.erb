@@ -8,15 +8,18 @@
 	 	<title>Stock Detail</title>
 	 </head>
 	 <body>
-	 <h1> Stock Detail</h1>
-		 <ul>
-			 <% @quote_detail.each do |stock|%>
-			 <li> Symbol: <%= stock[:symbol]%></li>
-			 <li>Last Trade Price: <%= stock[:last_trade_price]%></li>
-			 <li>Previous Close: <%= stock[:previous_close]%></li>
-			 <%end%>
-		 </ul>
-
+	 <div class="container">
+		 <div class="col-lg-6">
+			 <h1 class="text-muted"> Stock Detail</h1>
+				 <ul>
+					 <% @quote_detail.each do |stock|%>
+					 <li> Symbol: <%= stock[:symbol]%></li>
+					 <li>Last Trade Price: <%= stock[:last_trade_price]%></li>
+					 <li>Previous Close: <%= stock[:previous_close]%></li>
+					 <%end%>
+				 </ul>
+			</div>
+		</div>
 	 </body>
  </html>
 
