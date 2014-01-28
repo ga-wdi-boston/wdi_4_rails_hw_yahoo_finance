@@ -11,8 +11,12 @@
 	 <h1> The Top 10 Stocks</h1>
 		 <ol>
 			 <% @quotes.map do |stock|%>
-			 <li> Symbol: <%= stock[:symbol] %>, Last Trade Price: <%= stock[:last_trade_price] %></li>
+			 <li> Symbol: <%= stock[:symbol] %>, Last Trade Price: <%= stock[:last_trade_price] %>, <a href="http://localhost:3000/stocks/<%= stock[:symbol] %>"> <%= stock[:symbol] %> </a></li>
+
 			 <%end%>
+
+
 		 </ol>
 	 </body>
  </html>
+
