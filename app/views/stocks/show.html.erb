@@ -1,0 +1,26 @@
+<!-- <h1>Stocks#show</h1>
+<p>Find me in app/views/stocks/show.html.erb</p>
+ -->
+
+ <!DOCTYPE html>
+ <html>
+	 <head>
+	 	<title>Stock Detail</title>
+	 </head>
+	 <body>
+	 <div class="container">
+		 <div class="col-lg-6">
+			 <h1 class="text-muted"> Stock Detail</h1>
+				 <ul>
+					 <% @quote_detail.each do |stock|%>
+					 <li> Symbol: <%= stock[:symbol]%></li>
+					 <li>Last Trade Price: <%= stock[:last_trade_price]%></li>
+					 <li>Previous Close: <%= stock[:previous_close]%></li>
+					 <%end%>
+				 </ul>
+			</div>
+		</div>
+	 </body>
+ </html>
+
+
