@@ -1,6 +1,7 @@
 Wdi4HwRailsYahooFinance::Application.routes.draw do
 
-  get '/:ticker' => 'stocks#show'
+  get '/stocks/:ticker' => 'stocks#show'
+  post '/stocks' => 'stocks#create'
   root to: 'stocks#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
