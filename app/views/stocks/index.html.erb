@@ -1,0 +1,8 @@
+<h1>Index of Top 10 Stocks</h1>
+<ol>
+<% @data.each do |stock|%>
+ <li><h2><%= stock.name %> : $<%= stock.bid %></h2></li>
+ <a href = '/stocks/show/?stock.name'>redirect</a>
+
+<% end %>
+</ol>
