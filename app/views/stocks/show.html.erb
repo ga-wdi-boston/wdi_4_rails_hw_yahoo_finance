@@ -1,0 +1,17 @@
+<h1><%= link_to @quote.symbol, stocks_index_path %></h1>
+<section class="container">
+  <div class="high">
+    <span class="fancy">yearHIGH</span><%= @quote.year_high %>
+  </div>
+  <div class="price">
+  <%= @quote.last_trade_price_only %>
+  </div>
+  <div class="low">
+    <%= @quote.year_low %> <span class="fancy">yearLOW</span>
+  </div>
+  <div class="details">
+    peratio<span class="nums"><%= @quote.pe_ratio %></span>
+    volume<span class="nums"><%= @quote.volume %></span>
+    mktcap<span class="nums"><%= @quote.market_capitalization %></span>
+  </div>
+</section>
