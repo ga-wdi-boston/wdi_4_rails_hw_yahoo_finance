@@ -1,0 +1,105 @@
+// Place all the styles related to the Stocks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background: rgb(95, 95, 95);
+}
+
+h1 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 3rem;
+}
+
+.big a, .big a:visited, h1 a {
+  text-decoration: none;
+  font-family: 'Russo One', sans-serif;
+  font-size: 3rem;
+  color: rgba(25, 25, 25, 0.8);
+  font-weight: 800;
+}
+
+.big a:hover, h1 a:hover {
+  color: rgba(45, 45, 95, 0.9);
+  text-shadow: 0 0 2px rgb(255, 255, 255);
+  transition: all 0.5s ease;
+}
+
+.price {
+  display: inline;
+  position: relative;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: rgba(185, 185, 185, 0.8);
+  z-index: -5;
+}
+
+h1 {
+  font-family: 'Russo One', sans-serif;
+  font-size: 3rem;
+  color: rgba(255, 99, 71, 0.8);
+  font-weight: 800;
+  margin: 0.5rem 0.5rem;
+}
+
+.container {
+  width: 500px;
+  height: 200px;
+  line-height: 2rem;
+}
+
+.container .price {
+  margin-left: 5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 5.5rem;
+  z-index: 5;
+  opacity: 0.7;
+  text-shadow: 0 0 2px rgba(45, 45, 95, 0.9);
+  width: 500px;
+  text-align: center;
+}
+
+.low, .high {
+  font-size: 2rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  opacity: 0.6;
+  position: relative;
+  letter-spacing: -3px;
+}
+
+.high {
+  top: 0rem;
+  color: rgb(35, 200, 35);
+}
+
+.low {
+  bottom: 1rem;
+  right: 2.5rem;
+  text-align: right;
+  color: rgb(200, 35, 35);
+}
+
+.fancy {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.details {
+  font-size: 1.8rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: rgba(45, 45, 95, 0.9);
+  padding-left: 1rem;
+  position: relative;
+  bottom: 1rem;
+}
+
+.nums {
+  color: rgba(185, 185, 185, 0.8);
+}

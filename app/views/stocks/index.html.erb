@@ -1,0 +1,7 @@
+<h1>Top Ten Tech Stocks of 2013</h1>
+<ul>
+<% @quote.each do |quote| %>
+  <li><span class="big"><%= link_to quote.symbol, stocks_show_path(ticker: quote.symbol) %> </span>
+  <div class="price"><%= quote.last_trade_price_only %></div></li>
+<% end %>
+</ul>
