@@ -13,8 +13,11 @@
 			 <% @quote_detail.each do |stock|%>
 			 <li> Symbol: <%= stock[:symbol]%></li>
 			 <li>Last Trade Price: <%= stock[:last_trade_price]%></li>
+			 <li>Previous Close: <%= stock[:previous_close]%></li>
 			 <%end%>
 		 </ul>
 
 	 </body>
  </html>
+
+
