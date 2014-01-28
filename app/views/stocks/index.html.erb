@@ -1,9 +1,15 @@
 
 <h1>Top Ten Tech Stocks of 2013</h1>
 
-<ol>
-<% @stocks.each do |stock| %>
-<!-- OpenStruct allows you to use stock.summary rather than stock[summary] -->
-	<li><%=stock.symbol%></li>
-<%end%>
+<ol><% @stocks.each do |stock| %>
+	<li>Symbol: <%= stock.symbol %>
+	Open: <%= stock.open %>
+	High: <%= stock.high %>
+	Low: <%= stock.low %>
+	Last Trade Price:<%= stock.last_trade_price %>
+	</li>
 </ol>
+
+<%end%>
+
+
