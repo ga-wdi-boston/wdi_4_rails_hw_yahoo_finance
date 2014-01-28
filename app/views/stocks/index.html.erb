@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="hero-unit">
+		<div class="container">
+			<h1>ERRMAHGERD... STOCKS</h1>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="container">
+		<div class="span5">
+			<dl>
+				<% @stocks.each do |stock| %>
+				<div class="stock">
+					<div class="page-header">
+					<dt><h1><a href="/stocks/<%= stock.symbol %>"><%= stock.name %></a></h1></dt>
+					</div>
+					<dd>Last trade price: <%= stock.last_trade_price_only %></dd>
+					<dd>Year low: <%= stock.year_low %></dd>
+					<dd>Year high: <%= stock.year_high %></dd>
+				</div>
+			<% end %>
+			</dl>
+		</div>
+		<div class="span5">
+			<div>
+				<form  class="form-inline" action="/stocks" method="POST">
+					<input type="text" name="ticker" value="" placeholder="Enter ticker symbol">
+					<button type="submit" class="btn btn-primary">Search</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
