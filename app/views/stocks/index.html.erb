@@ -1,0 +1,9 @@
+
+<h1>Top Ten Tech Stocks of 2013</h1>
+
+<ol>
+<% @stocks.each do |stock| %>
+<!-- OpenStruct allows you to use stock.summary rather than stock[summary] -->
+	<li><%=stock.symbol%></li>
+<%end%>
+</ol>
