@@ -1,0 +1,6 @@
+<h1> Top 10 Tech Stocks </h1>
+
+<% @top10prices.each do |x| %>
+	<%= x.symbol %>: <%= x.last_trade_price %>
+	<br>
+<% end %>
