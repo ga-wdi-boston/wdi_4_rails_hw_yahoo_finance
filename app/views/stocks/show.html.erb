@@ -1,2 +1,28 @@
-<h1>Stocks#show</h1>
-<p>Find me in app/views/stocks/show.html.erb</p>
+<h1>Stock Details:</h1>
+<h2><%= @ticker%></h2>
+<ul><% @details.each do |detail| %>
+ <% detail %>
+<li>Ask: <%= detail.ask%></li>
+<li>Average Daily Volume: <%= detail.average_daily_volume%></li>
+<li>Ask Size: <%= detail.ask_size%></li>
+<li>Ask Real Time: <%= detail.ask_real_time%></li>
+<li>Bid Real Time: <%= detail.bid_real_time%></li>
+<li>Book Values: <%= detail.book_value%></li>
+<li>Bid Size: <%= detail.bid_size%></li>
+<li>Chance and Percent Change: <%= detail.chance_and_percent_change%></li>
+<li>Change: <%= detail.change%></li>
+<li>Commission: <%= detail.comission%></li>
+<li>Change Real Time: <%= detail.change_real_time%></li>
+<li>After Hours Change Real Time: <%= detail.after_hours_change_real_time%></li>
+<li>Dividend per Share: <%= detail.dividend_per_share%></li>
+<li>Last Trade Date: <%= detail.last_trade_date%></li>
+<li>Earnings per Share: <%= detail.earnings_per_share%></li>
+<li>Holdings Gain Percent: <%= detail.holdings_gain_percent%></li>
+<li>Annualized Gain: <%= detail.annualized_gain%></li>
+<li>Holdings Gain: <%= detail.holdings_gain%></li>
+<li>Low: <%= detail.low%></li>
+<li>High: <%= detail.high%></li>
+<li>Low 52 Weeks: <%= detail.low_52_weeks%></li>
+<li>High 52 Weeks: <%= detail.high_52_weeks%></li>
+<% end %>
+</ul>
