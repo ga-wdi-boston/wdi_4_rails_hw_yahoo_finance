@@ -5,7 +5,8 @@ class StocksController < ApplicationController
 	end
 
 	def show
-
+		ticker = params[:ticker]
+		@data = YahooFinance.quotes([ticker], [:name, :symbol, :ask, :bid, :last_trade_date])
 	end
 
 end

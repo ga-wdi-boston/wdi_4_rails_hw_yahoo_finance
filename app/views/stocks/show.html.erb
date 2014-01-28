@@ -1,6 +1,6 @@
 <% @data.each do |stock| %>
-<h3>Name: <%= stock.name %></h3>
-<p>Symbol: <a href="/stocks/<%= stock.symbol %>"><%= stock.symbol %></a></p>
+<h1>Name: <%= stock.name %></h1>
+<p>Symbol: <%= stock.symbol %></p>
 <p>Ask: <%= stock.ask %></p>
 <p>Bid: <%= stock.bid %></p>
 <p>LTD: <%= stock.last_trade_date %></p>
