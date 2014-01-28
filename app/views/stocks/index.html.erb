@@ -1,0 +1,13 @@
+
+<h1>Top Ten Tech Stocks of 2013</h1>
+
+<ul>
+<% @stocks.each do |stock| %>
+	<li>Symbol: <a href="stocks/<%= stock.symbol %>"><%= stock.symbol %></a>
+	Last Trade Price:<%= stock.last_trade_price %>
+	</li>
+<%end%>
+</ul>
+
+
+

@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'yahoo-finance', github: 'herval/yahoo-finance'
+
+require 'pry-rails'
+
 gem 'rails', '4.0.2'
 
 # Use postgresql as the database for Active Record
