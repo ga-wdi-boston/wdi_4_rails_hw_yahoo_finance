@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'yahoo-finance', github: 'herval/yahoo-finance'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 

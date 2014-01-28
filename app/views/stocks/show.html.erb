@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+    </head>
+    <body>
+      <ul>
+          <li>Name: <a href="/stocks/<%= stock[:ticker] %>"><%= stock.name %></a></li>
+          <li>Last Trade Price: <%= stock.last_trade_price %><br></li>
+          <li>Volume: <%= stock.volume %><br></li>
+          <li>52 Week Low: <%= stock.low_52_weeks %><br></li>
+          <li>52 Week High: <%= stock.high_52_weeks %></li>
+        <% end %>
+      </ul>
+    </body>
+</html>
