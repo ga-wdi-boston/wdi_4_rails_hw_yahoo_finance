@@ -1,0 +1,15 @@
+<h1>Stock Information</h1>
+
+<dl>
+  <% @stock_detail.each do |stock| %>
+  <dt><%= stock.symbol %></dt>
+  <dd>
+  Last Trade Price: <%= stock.last_trade_price %><br>
+  52 Week High: <%= stock.high_52_weeks %><br>
+  52 Week Low: <%= stock.low_52_weeks %><br>
+  Volume: <%= stock.volume %><br>
+  Market Cap: <%= stock.market_capitalization %><br>
+  EBITDA: <%= stock.ebitda%>
+  </dd>
+  <% end %>
+</dl>
