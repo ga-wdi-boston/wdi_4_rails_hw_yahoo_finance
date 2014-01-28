@@ -1,0 +1,7 @@
+<h1>Top Tech Stocks of 2013</h1>
+
+<ul>
+	<% @stocks_list.each do |stock| %>
+		<li><a href='stocks/<%= stock.symbol %>'><%= stock.name %></a></li>
+	<% end %>
+</ul>

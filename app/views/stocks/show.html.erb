@@ -1,0 +1,12 @@
+<h1>Latest info for <%=@stock_info.name%> (<%= @stock_info.symbol %>)</h1>
+<ul>
+	<li>Last trade price: <%= @stock_info.last_trade_price %></li>
+	<li>52 week high: <%= @stock_info.high_52_weeks %></li>
+	<li>52 week low: <%= @stock_info.low_52_weeks %></li>
+	<li>Change from 50-day moving avg: <%= @stock_info.change_from_50_day_moving_average %></li>
+
+
+
+	<a href='/'>Back to stocks list</a>
+
+</ul>

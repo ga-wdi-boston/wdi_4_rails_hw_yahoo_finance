@@ -5,6 +5,7 @@ gem 'rails', '4.0.2'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
+gem 'yahoo-finance', github: 'herval/yahoo-finance'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -30,6 +31,24 @@ gem 'jbuilder', '~> 1.2'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :development do
+  gem 'pry'
+  gem 'pry-nav'
+  gem 'pry-stack_explorer'
+  # Add model attributes
+  gem 'annotate'
+  gem 'faker'
+  gem 'chronic'
+  # Turn off verbose logging of asset requests
+  gem 'quiet_assets'
+  # see Railscast for better_error gem
+  # http://railscasts.com/episodes/402-better-errors-railspanel
+  # FOR sublime text 3 MUST INSTALL sublime-url-protocol-mac, http://goo.gl/8KX1lb
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
 end
 
 # Use ActiveModel has_secure_password
