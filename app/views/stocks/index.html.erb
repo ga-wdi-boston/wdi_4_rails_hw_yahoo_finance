@@ -7,7 +7,7 @@
   Last Trade Price: <%= stock.last_trade_price %><br>
   52 Week High: <%= stock.high_52_weeks %><br>
   52 Week Low: <%= stock.low_52_weeks %><br>
-  <a href = "/stocks/<%= stock.symbol %>" >Additional Details</a>
+  <%= link_to 'Additional Details', stocks_show_path(stock.symbol) %>
   </dd>
   <% end %>
 </dl>
