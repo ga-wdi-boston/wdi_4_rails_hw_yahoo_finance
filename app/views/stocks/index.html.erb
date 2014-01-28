@@ -1,0 +1,9 @@
+<div class='container'>
+  <h1>Top Ten Tech Stocks of 2013</h1>
+  <dl>
+    <% @data.each do |stock| %>
+    <dt><%= link_to stock.name, stocks_show_path(stock.symbol) %></dt>
+    <dd>Last Trade Price: $<%= stock.last_trade_price %></dd>
+    <% end %>
+  </dl>
+</div>
