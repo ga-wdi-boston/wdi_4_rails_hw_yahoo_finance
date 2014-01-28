@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Top Ten Tech Tickers 2013</title>
+    </head>
+    <body>
+      <h1>Top Ten Tech Tickers 2013</h1>
+      <ol>
+        <% @stocks.each do |stock| %>
+          <li><a href="/stocks/<%= stock[:symbol] %>"><%= stock.name %></a> <%= stock.symbol %> <%= stock.last_trade_price %>
+        </li>
+        <% end %>
+      </ol>
+    </body>
+</html>
