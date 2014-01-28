@@ -1,8 +1,11 @@
-<h1>Stock Detail for <%= @stock.name %></h1>
-<dl>
-  <% @details.each do |field| %>
-  <dt><%= field %></dt>
-  <dd><%= @stock.send(field) %></dd>
-  <% end %>
-</dl>
-<%= link_to 'Go Back', stocks_index_path %>
+
+<div class='container'>
+  <h1>Stock Detail for <%= @stock.name %></h1>
+  <dl>
+    <% @details.each do |field| %>
+    <dt><%= field %></dt>
+    <dd><%= @stock.send(field) %></dd>
+    <% end %>
+  </dl>
+  <%= link_to 'Go Back', stocks_index_path %>
+</div>
